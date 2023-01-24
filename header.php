@@ -13,6 +13,12 @@
 <body>
 
     <header>
-        <h1></h1>
-        <nav></nav>
+        <h1>Titre principal</h1>
+        <nav>
+            <ul>
+                <li>Nav 1</li>
+                <li>Nav 2</li>
+                <li>Nav 3</li>
+            </ul>
+        </nav>
     </header>
