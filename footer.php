@@ -1,14 +1,24 @@
+<?php
+
+//Accès direct interdit
+if (!defined('ABSPATH')) {
+    http_response_code(403);
+    die('Erreur 403 : Forbidden');
+}
+
+?>
+
 <footer>
 
-    <section>
-        <h3>Titre footer</h3>
-        <address>
-            <ul>
-                <li>Adresse 1</li>
-                <li>Adresse 2</li>
-                <li>Adresse 3</li>
-            </ul>
-        </address>
+    <section id="navigation-secondaire">
+        <h3><?= get_bloginfo('name'); ?></h3>
+        <?= wp_nav_menu(
+            array(
+                'menu' => 'footer',
+                'container' => 'nav',
+                'theme_location' => 'footer'
+            )
+        ) ?>
     </section>
 </footer>
 <?= wp_footer(); ?>
