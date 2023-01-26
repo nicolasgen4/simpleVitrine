@@ -15,10 +15,16 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgba(221, 221, 221, 0.8);
+}
+
 h1,
 h2,
-ul {
+ul,
+p {
     margin: 0;
+    padding: 0;
 }
 
 /*HEADER*/
@@ -26,65 +32,138 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: gray;
+    background-color: rgba(214, 213, 196, 0.8);
 }
 
 header>div#navigation-principale {
     width: 80%;
+    max-height: 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-header div>nav {
-    height: 50px;
+header div>nav>ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 5.2rem;
+    list-style: none;
+}
+
+header div>nav>ul>li>a {
+    text-decoration: none;
+    color: #382815;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+header div>nav>ul>li>a:hover,
+header div>nav>ul>li>a:focus {
+    text-decoration: underline #382815;
 }
 
 /*SECTION VITRINE ACCUEIL*/
+main#accueil {
+    display: flex;
+    flex-direction: column;
+}
+
 main#accueil section:nth-child(2) {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: antiquewhite;
+    background: url("assets/images/vitrine.jpg") center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 main#accueil>h1 {
     position: absolute;
-    top: 40%;
+    top: 34%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 4.4rem;
+    font-weight: 400;
+    color: #382815;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+main#accueil section:nth-child(2)>h2 {
+    width: 52%;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0.8rem;
+    background-color: rgba(214, 213, 196, 0.48);
+    border-radius: 0.4rem;
 }
 
 main#accueil section:nth-child(2)>div {
     display: flex;
+    margin-top: 1.6rem;
+    gap: 12rem;
 }
 
-/*SECTIONS PRESENTATION*/
+main#accueil section:nth-child(2)>div>button {
+    min-height: 3.2rem;
+    min-width: 10.8rem;
+    background-color: #382815;
+    border: none;
+    color: rgb(221, 221, 221);
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+main#accueil section:nth-child(2)>div>button:hover {
+    background-color: rgba(221, 221, 221, 0.8);
+    color: #382815;
+    border: 2px solid #382815;
+}
+
+/*SECTIONS PRESENTATIONS ACCUEIL*/
 main#accueil section:nth-child(even):not(main#accueil section:nth-child(2)) {
-    max-width: 1400px;
-    margin: auto;
-    display: flex;
     flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
 }
 
 main#accueil section:nth-child(odd) {
+    background-color: rgba(214, 213, 196, 0.8);
+    border-radius: 0.2rem;
+}
+
+main#accueil section:not(main#accueil section:nth-child(2)) {
     max-width: 1400px;
+    min-height: 16rem;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+main#accueil section p {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+main#accueil section:nth-child(even):not(main#accueil section:nth-child(2)) p {
+    text-align: right;
 }
 
 /*FOOTER*/
 footer {
-    background-color: darkolivegreen;
+    background-color: #3828157c;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -94,5 +173,31 @@ footer {
 footer>section#navigation-secondaire {
     width: 80%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+footer>section#navigation-secondaire>h3 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #382815;
+}
+
+footer>section#navigation-secondaire>nav>ul {
+    display: flex;
     justify-content: space-between;
+    list-style: none;
+    gap: 2rem;
+}
+
+footer>section#navigation-secondaire>nav>ul>li>a {
+    text-decoration: none;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: #382815;
+}
+
+footer>section#navigation-secondaire>nav>ul>li>a:hover {
+    text-decoration: underline #382815;
 }
