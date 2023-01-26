@@ -8,3 +8,91 @@ Version: 1.0
 License: GNU General Public License v3.0
 Text Domain: simpleVitrine
 */
+
+/*GLOBAL*/
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+ul {
+    margin: 0;
+}
+
+/*HEADER*/
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: gray;
+}
+
+header>div#navigation-principale {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header div>nav {
+    height: 50px;
+}
+
+/*SECTION VITRINE ACCUEIL*/
+main#accueil section:nth-child(2) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+
+main#accueil>h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main#accueil section:nth-child(2)>div {
+    display: flex;
+}
+
+/*SECTIONS PRESENTATION*/
+main#accueil section:nth-child(even):not(main#accueil section:nth-child(2)) {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+main#accueil section:nth-child(odd) {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*FOOTER*/
+footer {
+    background-color: darkolivegreen;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer>section#navigation-secondaire {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
