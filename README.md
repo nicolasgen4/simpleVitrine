@@ -7,5 +7,3 @@ Un thème Wordpress épuré, léger et responsive. Idéal pour les sites vitrine
   <li>Templates de pages de services avec cartes modifiables</li>
   <li>Template d'une page de contact avec formulaire stylisé</li>
 </ul>
-
-<img src="https://raw.githubusercontent.com/nicolasgen4/simpleVitrine/main/screenshot.png" alt="Screenshot Simple Vitrine">
