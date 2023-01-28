@@ -1,0 +1,83 @@
+@media screen and (max-width: 1000px) {
+    header>div#navigation-principale {
+        width: 98%;
+    }
+
+    main#accueil>h1 {
+        font-size: 3.2rem;
+    }
+
+    main#accueil section:nth-child(2)>h2 {
+        width: 98%;
+    }
+
+    footer>section#navigation-secondaire {
+        width: 98%;
+    }
+
+    main.pages_main > div#mentions_legales {
+        padding: 0.2rem;
+    }
+
+    main.pages_main > div#mentions_legales>section {
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    header>div#navigation-principale,
+    footer>section#navigation-secondaire {
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    header>div#navigation-principale>nav {
+        margin-bottom: 1rem;
+    }
+
+    main#accueil>h1 {
+        font-size: 2.2rem;
+    }
+
+    main#accueil section:not(main#accueil section:nth-child(2)),
+    main#accueil section:nth-child(even):not(main#accueil section:nth-child(2)) {
+        flex-direction: column;
+    }
+
+    main#accueil section:not(main#accueil section:nth-child(2)) p,
+    main#accueil section:nth-child(even):not(main#accueil section:nth-child(2)) p {
+        width: 98%;
+    }
+
+    main#accueil section:not(main#accueil section:nth-child(2))>div,
+    main#accueil section:nth-child(even):not(main#accueil section:nth-child(2))>div {
+        justify-content: center;
+        align-items: center;
+    }
+
+    main#accueil section:nth-child(2n):not(main#accueil section:nth-child(2)) p {
+        text-align: left;
+    }
+
+    main.pages_main>section:nth-child(2) {
+        padding-top: 6rem;
+    }
+
+    main.pages_main>section:nth-child(2) p {
+        width: 98%;
+    }
+
+    main.pages_main>section:nth-child(2) h2 {
+        text-align: center;
+    }
+
+    main.pages_main>div#form {
+        padding: 0;
+        width: 98%;
+    }
+
+    main.pages_main>div#form>div {
+        width: 98%;
+    }
+}
