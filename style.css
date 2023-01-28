@@ -21,10 +21,47 @@ body {
 
 h1,
 h2,
+h3,
 ul,
 p {
     margin: 0;
     padding: 0;
+}
+
+h1,
+h2,
+h3,
+a,
+button,
+label,
+input,
+textarea {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+ul,
+p {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+button {
+    min-height: 3.2rem;
+    min-width: 10.8rem;
+    max-width: 12rem;
+    background-color: #382815;
+    border: none;
+    color: rgb(221, 221, 221);
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(221, 221, 221, 0.8);
+    color: #382815;
+    border: 2px solid #382815;
 }
 
 /*HEADER*/
@@ -40,7 +77,7 @@ header {
 
 header>div#navigation-principale {
     width: 80%;
-    max-height: 100px;
+    min-height: 6.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +95,6 @@ header div>nav>ul>li>a {
     color: #382815;
     font-size: 1.2rem;
     font-weight: 700;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 header div>nav>ul>li>a:hover,
@@ -88,9 +124,7 @@ main#accueil>h1 {
     top: 34%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 4.4rem;
-    font-weight: 400;
     color: #382815;
     text-transform: capitalize;
     white-space: nowrap;
@@ -98,9 +132,7 @@ main#accueil>h1 {
 
 main#accueil section:nth-child(2)>h2 {
     width: 52%;
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
-    font-weight: 400;
     padding: 0.8rem;
     background-color: rgba(214, 213, 196, 0.48);
     border-radius: 0.4rem;
@@ -110,25 +142,6 @@ main#accueil section:nth-child(2)>div {
     display: flex;
     margin-top: 1.6rem;
     gap: 12rem;
-}
-
-main#accueil section:nth-child(2)>div>button {
-    min-height: 3.2rem;
-    min-width: 10.8rem;
-    background-color: #382815;
-    border: none;
-    color: rgb(221, 221, 221);
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    padding: 0.8rem;
-    border-radius: 0.2rem;
-    text-transform: capitalize;
-    cursor: pointer;
-}
-
-main#accueil section:nth-child(2)>div>button:hover {
-    background-color: rgba(221, 221, 221, 0.8);
-    color: #382815;
-    border: 2px solid #382815;
 }
 
 /*SECTIONS PRESENTATIONS ACCUEIL*/
@@ -144,7 +157,7 @@ main#accueil section:nth-child(odd) {
 }
 
 main#accueil section:not(main#accueil section:nth-child(2)) {
-    max-width: 1400px;
+    max-width: 1320px;
     min-height: 16rem;
     margin: auto;
     display: flex;
@@ -153,17 +166,113 @@ main#accueil section:not(main#accueil section:nth-child(2)) {
     gap: 2rem;
 }
 
-main#accueil section p {
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
+main#accueil section:not(main#accueil section:nth-child(2))>div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+main#accueil section:nth-child(even):not(main#accueil section:nth-child(2))>div {
+    align-items: flex-end;
 }
 
 main#accueil section:nth-child(even):not(main#accueil section:nth-child(2)) p {
     text-align: right;
 }
 
+/*SECTION PAGES SERVICES*/
+main.pages_main {
+    display: flex;
+    flex-direction: column;
+}
+
+main.pages_main>h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4.4rem;
+    color: transparent;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+main.pages_main>section:nth-child(2) {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("assets/images/vitrine.jpg") center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    gap: 2rem;
+}
+
+main.pages_main>section:nth-child(2) h2 {
+    font-size: 2.2rem;
+}
+
+main.pages_main>section:nth-child(2) p {
+    width: 54%;
+}
+
+main.pages_main>div {
+    max-width: 1320px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 1.6rem;
+}
+
+main.pages_main>div>section:not(main.pages_main>section:nth-child(2)) {
+    max-width: 20rem;
+    min-height: 16rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    gap: 1.6rem;
+}
+
+/*FORMULAIRE PAGE CONTACT*/
+main.pages_main>div#form {
+    flex-direction: column;
+}
+
+main.pages_main>div#form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    max-width: 56%;
+}
+
+main.pages_main>div#form>div>input {
+    min-height: 2.2rem;
+}
+
+main.pages_main>div#form>div>textarea {
+    min-height: 18rem;
+}
+
+main.pages_main>div#form>div>input:focus,
+main.pages_main>div#form>div>textarea:focus,
+main.pages_main>div#form>div>input:focus-visible,
+main.pages_main>div#form>div>textarea:focus-visible {
+    outline: rgb(199, 182, 145) .2rem solid;
+}
+
+main.pages_main>div#form>div:last-child>button {
+    align-self: center;
+}
+
 /*FOOTER*/
 footer {
     background-color: #3828157c;
+    min-height: 6.4rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -179,8 +288,6 @@ footer>section#navigation-secondaire {
 }
 
 footer>section#navigation-secondaire>h3 {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-weight: 400;
     font-size: 1.8rem;
     color: #382815;
 }
@@ -194,7 +301,6 @@ footer>section#navigation-secondaire>nav>ul {
 
 footer>section#navigation-secondaire>nav>ul>li>a {
     text-decoration: none;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: #382815;
 }
 
